@@ -1,0 +1,33 @@
+from random import randint
+from time import sleep
+print('M' * 20)
+print('JOGO DE ADIVINHAÇÃO')
+print('M' * 20)
+print('''Olá! Meu nome é Morty. Vamos jogar um jogo?
+Eu vou pensar em um número, de 0 a 5, e você tenta
+descobrir qual é.''')
+resp = str(input('Está pronto? [S/N]')).upper().strip()[0]
+while resp != 'S' or 'N':
+    resp = str(input('Não entendi. Está pronto? [S/N]')).upper().strip()[0]
+if resp == 'S':
+    while True:
+        print('Ótimo! Me dê um momento para pensar no número.')
+        sleep(1.5)
+        print('.',end='')
+        sleep(1.5)
+        print('.',end='')
+        sleep(1.5)
+        print('.')
+        numero = randint(0,5)
+        tentativa = int(input('Pronto! Qual foi o número que eu pensei? '))
+        if tentativa == numero:
+            print('Você ACERTOU!')
+        else:
+            resp2 = str(input('Você ERROU. Quer jogar de novo? [S/N]')).upper().strip()[0]
+            while resp2 != 'S' or 'N':
+                resp2 = str(input('Não entendi. Está pronto? [S/N]')).upper().strip()[0]
+            if resp2 == 'N':
+                break
+            print('M' * 20)
+            print('FIM DE JOGO')
+            print('M' * 20)

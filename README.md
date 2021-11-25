@@ -1,2 +1,2 @@
-# Exercicos-com-erro-CEV
- 
+# Exercicios-com-erro-CEV
+ Repositório criado para expor códigos para os exercícios do Curso em Video de Python, que por alguma razão (espero que me digam, se souberem) não estão funcionando corretamente. O objetivo desse repositório é mais buscar ajuda de programadores mais experientes ou profissionais, enquanto sou iniciante e estou sujeita a cometer erros básicos. Desde já agradeço o feedback e apoio!
