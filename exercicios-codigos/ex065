@@ -17,9 +17,9 @@ while goon not in 'N':
     if num < menor:
         menor = num
     goon = str(input('Quer continuar digitando?[S/N] ')).strip().upper()[0]
-    # Aqui cabe outro loop para validar a resposta, mas não consigo
-    # pensar em uma forma de limitar o input a S/N sem ter que criar
-    # um novo while a cada input
+    if goon not in 'SN':
+        while goon not in 'SN':
+            goon = str(input('Não entendi. Quer continuar digitando?[S/N] ')).strip().upper()[0]
 print(f'''{c} números foram digitados
 Média: {med}
 Maior: {maior}
