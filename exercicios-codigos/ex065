@@ -1,0 +1,26 @@
+#Média e Maior/Menor entre vários números com while
+c = 1
+num = int(input('Digite um número: '))
+s = num
+maior = menor = num
+med = num
+goon = str(input('Quer continuar digitando?[S/N] ')).strip().upper()[0]
+while goon not in 'SN':
+    goon = str(input('Resposta inválida. Quer continuar?[S/N] ')).strip().upper()[0]
+while goon not in 'N':
+    num = int(input('Digite um número: '))
+    s += num
+    c += 1
+    med = s / c
+    if num > maior:
+        maior = num
+    if num < menor:
+        menor = num
+    goon = str(input('Quer continuar digitando?[S/N] ')).strip().upper()[0]
+    # Aqui cabe outro loop para validar a resposta, mas não consigo
+    # pensar em uma forma de limitar o input a S/N sem ter que criar
+    # um novo while a cada input
+print(f'''{c} números foram digitados
+Média: {med}
+Maior: {maior}
+Menor: {menor}''')
