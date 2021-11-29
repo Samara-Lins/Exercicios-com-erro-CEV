@@ -1,0 +1,7 @@
+# Gerador de PA com 10 termos
+pt = int(input('Primeiro termo da PA: '))
+r = int(input('Razão da PA: '))
+c = pt
+while c <= (c + 9*r):
+    print(c,end=' ')
+    c += r
