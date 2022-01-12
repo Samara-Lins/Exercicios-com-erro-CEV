@@ -1,0 +1,19 @@
+expressao = str(input('Digite uma expressão matemática: '))
+lista = []
+for c in range(0,len(expressao)):
+    lista.append(expressao[c])
+while lista.count('(') > 0 and lista.count(')') > 0:
+    if expressao.find('(') < expressao.find(')'):
+        lista.remove('(')
+        lista.remove(')')
+        break
+    else:
+        lista.remove(')')
+        break
+if expressao.count('(') == expressao.count(')'):
+    if lista.count('(') == 0 and lista.count(')') == 0:
+        print('A expressão é válida.')
+    else:
+        print('A expressão é inválida.')
+else:
+    print('A expressão é inválida.')
